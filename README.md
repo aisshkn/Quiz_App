@@ -21,14 +21,18 @@ Prerequisites
 Python 3.x installed
 Flask installed (pip install flask)
 Steps
+
 Clone the repository:
 git clone https://github.com/aisshkn/quiz-app.git
 cd quiz-app
+
 Create a virtual environment and activate it:
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
+
 Install dependencies:
 pip install flask
 Run the app:
 python app.py
+
 Open your browser and go to http://127.0.0.1:5000.
