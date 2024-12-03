@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="text-center">Quiz Question</h2>
+<hr>
+<form method="POST">
+    <div class="mb-4">
+        <p>{{ question }}</p>
+    </div>
+    {% for key, option in options.items() %}
+        <div class="form-check mb-2">
+            <input class="form-check-input" type="radio" name="answer" id="option{{ key }}" value="{{ key }}" required>
+            <label class="form-check-label" for="option{{ key }}">
+                {{ option }}
+            </label>
+        </div>
+    {% endfor %}
+    <input type="hidden" name="correct_option" value="{{ correct_option }}">
+    <div class="text-center">
+        <button type="submit" class="btn btn-success">Submit Answer</button>
+    </div>
+</form>
+{% endblock %}
