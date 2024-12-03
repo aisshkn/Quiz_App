@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="text-center">Quiz Dashboard</h1>
+<hr>
+<div class="mb-3">
+    <p><strong>Total Questions Attempted:</strong> {{ performance['attempted'] }}</p>
+    <p><strong>Correct Answers:</strong> {{ performance['correct'] }}</p>
+    <p><strong>Overall Score:</strong> {{ performance['score'] }}%</p>
+</div>
+<div class="button-group">
+    <a href="/quiz" class="btn btn-primary">Take Quiz</a>
+</div>
+<div class="reset-button">
+    <a href="/reset" class="btn btn-danger">Reset Quiz</a>
+</div>
+
+
+
+{% endblock %}
